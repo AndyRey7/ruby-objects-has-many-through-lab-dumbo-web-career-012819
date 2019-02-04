@@ -15,7 +15,7 @@ class Artist
 
     def new_song(name, genre)
 #to get a new song simply write the class Song with its arguments and
-#the self realtes to the artist, not to get confused with the class calling
+#the self relates to the artist, not to get confused with the class calling
 #itself.
         Song.new(name, self, genre)
     end
@@ -23,7 +23,7 @@ class Artist
     def songs
         Song.all.select do |song|
 #iterates down into the song object and the select method gets the getter method
-#"artist" which equals to self which is the artist instance and selects all the
+#"artist"which equals to self which is the artist instance and selects all the
 #songs from that particular artist.
             song.artist == self
         end
